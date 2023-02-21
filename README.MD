@@ -75,3 +75,17 @@ Before your deploy set the enviroment virable
 }
 ]
 }
+
+## STEP 12: Add Pre-commit hook
+
+Since vercel requires js source we just have to build the project before commit.
+
+## Step 13: Modify scripts in package.json
+
+"scripts": {
+"start": "nodemon src/index.ts",
+"build": "rimraf dist && tsc",
+"ts.check": "tsc --project tsconfig.json",
+"add-build": "git add dist",
+"test": "echo \"Error: no test specified\" && exit 1"
+},
