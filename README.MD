@@ -56,3 +56,22 @@ add your need project from github on vercel
 Before your deploy set the enviroment virable
 
 - SERVERPORT : 9090
+
+## STEP 11: Add Vercel.json file
+
+{
+"version": 2,
+"builds": [
+{
+"src": "dist/index.js",
+"use": "@vercel/node",
+"config": { "includeFiles": ["dist/**"] }
+}
+],
+"routes": [
+{
+"src": "/(.*)",
+"dest": "dist/index.js"
+}
+]
+}
