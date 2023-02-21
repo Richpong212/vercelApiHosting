@@ -40,3 +40,19 @@ touch .gitignore
 Add the following in your gitignore file
 .env
 /node_modules
+
+## STEP 9: Git step up
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Richpong212/vercelApiHosting.git
+git push -u origin master
+
+## STEP 10: Create account on vercel or login
+
+add your need project from github on vercel
+Before your deploy set the enviroment virable
+
+- SERVERPORT : 9090
